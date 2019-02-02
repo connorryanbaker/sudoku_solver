@@ -27,7 +27,9 @@ class Sudoku
   def make_grid(file)
     res = []
     open(file).each_line do |line|
-      res << line.chomp.split(" ").map {|c| Cell.new(c)}
+      unless !line.match(/\d/)
+        res << line.chomp.split(" ").map {|c| Cell.new(c)}
+      end
     end
     res
   end

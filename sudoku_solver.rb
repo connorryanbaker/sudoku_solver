@@ -16,7 +16,7 @@ class SudokuSolver
   def render
     system('clear')
     @board.render
-    sleep 0.1
+    sleep 0.05
   end
   
   def new_cell
